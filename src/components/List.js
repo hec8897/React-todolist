@@ -7,17 +7,23 @@ const btnStyle = {
   border: "1px solid teal",
   borderRadius: ".25rem",
   fontSize: "14px",
-  margin:'5px'
+  margin: "5px",
+  cursor:"pointer"
 };
 
 const List = (props) => {
+  const { name, Desc, UpdateList, DeleteList } = props;
   return (
     <li>
-      <h2>{props.name}</h2>
-      <p>{props.Desc}</p>
+      <h2>{name}</h2>
+      <p>{Desc}</p>
       <div>
-        <button style={btnStyle}>수정</button>
-        <button style={btnStyle}>삭제</button>
+        <button style={btnStyle} onClick={() => UpdateList(name)}>
+          수정
+        </button>
+        <button style={btnStyle} onClick={() => DeleteList(name)}>
+          삭제
+        </button>
       </div>
     </li>
   );
