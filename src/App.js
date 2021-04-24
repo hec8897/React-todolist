@@ -48,8 +48,6 @@ class App extends Component {
         return ele.idx!==idx
       })
     })
- 
-    console.log(idx);
   }
 
   render() {
