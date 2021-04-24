@@ -6,13 +6,12 @@ import List from "./List";
 // }
 
 const ListView = (props) => {
-  console.log(props);
 
   const list = props.list.map((ele) => (
     <List
       key={ele.idx}
+      idx={ele.idx}
       name={ele.Name}
-      Desc={ele.Desc}
       UpdateList={props.UpdateList}
       DeleteList={props.DeleteList}
 
