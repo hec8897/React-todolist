@@ -15,7 +15,9 @@ const List = (props) => {
   const { idx, name, UpdateList, DeleteList } = props;
   return (
     <li>
-      <h2>{idx}.{name}</h2>
+      <h2>
+        {idx}.{name}
+      </h2>
       <div>
         <button style={btnStyle} onClick={() => UpdateList(name)}>
           수정
